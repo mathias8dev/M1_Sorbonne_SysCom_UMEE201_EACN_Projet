@@ -1,7 +1,19 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python -c \":*)"
+      "Bash(python -c \":*)",
+      "Bash(qpdf --decrypt \"Wireless Communication lab - experiments.pdf\" \"Wireless Communication lab - experiments_unlocked.pdf\")",
+      "Bash(pdftotext -layout \"Wireless Communication lab - experiments.pdf\" wcl_text.txt)",
+      "Bash(unzip -o main_5_Signal_Space_Simulation_with_Channel.mlx -d /tmp/ls5/)",
+      "Bash(cp /tmp/ls5/matlab/document.xml \"/c/Users/mathi/Documents/M1_SysCom/UM4EE201/EACN Projet/Impl/Livescript 5/document.xml\")",
+      "Bash(python -c ' *)",
+      "Bash(python -c \"import docx; print\\(docx.__version__\\)\")",
+      "Bash(python -c \"import latex2mathml; print\\(latex2mathml.__version__ if hasattr\\(latex2mathml,'__version__'\\) else 'OK'\\)\")",
+      "Bash(python -c \"from lxml import etree; print\\(etree.__version__\\)\")",
+      "Bash(python -c \"import importlib.resources; from pathlib import Path; import sys; print\\(sys.executable\\)\")",
+      "Bash(pip install *)",
+      "Bash(python -c \"import latex2mathml.converter; print\\(latex2mathml.converter.convert\\('x = \\(1+\\\\\\\\\\\\\\\\beta\\) R_s'\\)\\)\")",
+      "Bash(python build_report.py)"
     ]
   }
 }
