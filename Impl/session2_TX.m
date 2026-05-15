@@ -14,16 +14,16 @@ addpath( fullfile( pwd , 'Livescript 1' ) ) ;
 addpath( fullfile( pwd , 'Livescript 3' ) ) ;
 
 %% Communication parameters
-nb_data         = 1000 ;            % Number of data symbols per frame
-nb_pilot        = 100 ;              % Number of pilot symbols per frame
+nb_data         = 200 ;            % Number of data symbols per frame
+nb_pilot        = 50 ;              % Number of pilot symbols per frame
 nb_bit_per_symb = 4 ;               % Bits per symbol (16-QAM)
 rolloff         = 0.5 ;             % RRC roll-off factor
-symb_rate       = 5e6 ;             % Symbol rate (Hz) — keep symb_rate*sps in [5;56] MHz
-sps             = 4 ;               % Samples per symbol (oversampling)
+symb_rate       = 100e3 ;             % Symbol rate (Hz) — keep symb_rate*sps in [5;56] MHz
+sps             = 200 ;               % Samples per symbol (oversampling)
 span            = 32 ;              % RRC filter span (in symbols)
 
-fc              = 1e9 ;           % Carrier frequency (Hz) — ISM band for over-the-air tests
-g_tx            = 60 ;              % USRP TX gain (dB)
+fc              = 5.2e9 ;           % Carrier frequency (Hz) — ISM band for over-the-air tests
+g_tx            = 30 ;              % USRP TX gain (dB)
 
 % Derived
 nb_bit = nb_data * nb_bit_per_symb ;

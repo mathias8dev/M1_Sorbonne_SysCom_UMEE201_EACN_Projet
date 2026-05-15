@@ -21,7 +21,7 @@ addpath( fullfile( pwd , 'Livescript 3' ) ) ;     % convolution_RX, raised_cosin
 addpath( fullfile( pwd , '..' , 'Mesures' ) ) ;   % syncfun
 
 %% Mode: 'live' (continuous display) or 'ber' (finite frames + BER)
-RX_MODE   = 'ber' ;        % 'live' | 'ber'
+RX_MODE   = 'live' ;        % 'live' | 'ber'
 nb_frame  = 50 ;            % only used in 'ber' mode
 
 %% Receiver-only parameters
@@ -101,7 +101,7 @@ while keep_running
     symb_RX = convolution_RX( signal_RX_sync , g , sps ) ;
     % Remove the transient introduced by the TX and RX RRC filters
     symb_RX = symb_RX( span + 1 : end - span ) ;
-
+   
     %% --- 4. Channel estimation from the pilots (LS, then averaging) --
     H_estim    = symb_RX( 1 : nb_pilot ) ./ symb_pilot ;
     h_estim_av = mean( H_estim ) ;
